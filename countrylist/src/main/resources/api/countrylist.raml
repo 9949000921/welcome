@@ -1,0 +1,41 @@
+#%RAML 1.0
+title: countrylist
+version: v5
+protocols:
+  - HTTP
+  - HTTPS
+
+/master/country:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /country-responce/country-responce.json
+/master/1/state:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /country-responce/state-responce/state-responce.json
+/masters:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /country-responce/state-responce/masters-responce.json
+/Deposits:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /country-responce/state-responce/deposits-responce.json
+/saleTransactions:
+  get:
+    body:
+      application/json:
+        example: !include /country-responce/state-responce/sales transactions.json
+          
